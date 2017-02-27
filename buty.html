@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" href="styles/st3.css">
+<link rel="stylesheet" href="styles/st1.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>&gt;BUY買首頁&lt;</title>
+<link rel="icon" href="images/love.png" />
+	
+	<style>
+	left_border {
+	width:450px;
+	height:1000px;
+		float:left;
+		display:block;
+		padding:opx;
+		margin:auto; 
+		
+		}
+	.left_video
+	{ margin-top:880px;
+	padding:0px;
+
+	}
+		
+	.bottom { margin-bottom:0px
+	 ; margin-top:1000px}
+	.down{
+		margin-left:410px}
+	.down_title {
+		margin-left:350px;}
+	
+	article {width:900px;
+	height:4000px;
+	margin:auto;
+	padding:0px;
+	display:block; 
+	background-image: url("images/bg.gif"); 
+	} <!--設定區塊block-->
+	
+	<!--設定容器大小-->
+	.img1 {float:right;
+	height:250px;
+	width:250px;}
+	.img2 {float:left}
+	.a {color:#999; font-size:12px;margin:0px 0px 0px 50px; }
+	.b {color:black }
+	
+    	
+			 </style>
+ 
+ 
+ 
+ <style>
+	
+	.imgA
+	{
+		width:800px;
+		height:400px;
+		padding:10px;
+		margin:50px 0px 0px 20px}
+	.imgB
+	{
+		width:600px;
+		height:250px;
+		margin-left:100px;}
+
+
+	.imgC {
+		margin-left:200px;}
+		#picA1 {
+		margin-right:20px;}
+		#picA2 {
+		margin-right:20px;}
+		#picA3 {
+		margin-right:20px;}
+		#picA4 {
+		margin-right:20px;}
+</style>
+
+<script>	
+			
+						
+			var imag = Array("images/1.png","images/2.jpg","images/3.jpg","images/4.png");
+						var imag_len = imag.length ; 
+						var i = 0 ; 
+
+			var imag2 = 	Array("images/cir1.png","images/cir1.png","images/cir1.png","images/cir1.png");
+						var imag_len = imag2.length ; 
+						var ii = 0 ; 
+						
+				var imag3 = Array("images/cir.png","images/cir.png","images/cir.png","images/cir.png");
+						var imag_len = imag3.length ; 
+						var iii = 0 ; 
+						
+						
+			window.onload = function ()
+			{
+				S();
+				var root = document.documentElement;
+				//alert(root.nodeType);
+				//alert(root.nodeName);
+				
+				document.getElementById("picA").onclick = WWW ;//註冊點擊圖片的網站方法
+				
+				document.getElementById("picA1").onclick = PIAover1;
+				document.getElementById("picA2").onclick = PIAover2;
+				document.getElementById("picA3").onclick = PIAover3;
+				document.getElementById("picA4").onclick = PIAover4; //註冊 移入
+				
+			
+				document.getElementById("IMGC").onmouseout = PIAout1;
+				 //註冊移出滑鼠
+				//註冊一個移出
+				
+			 
+				}
+					function S (){
+						
+						var d = new Date() ;
+						var s = d.getSeconds();
+						
+					   document.getElementById("picA").src  = imag[i]; //設定主畫面撥放
+					   
+					 
+               			i++;
+                		if(i>=imag.length)  
+						i=0;
+						
+						  document.getElementById("picA"+(i+1)).src  = imag2[i]; //設定小圓圈撥放
+						  document.getElementById("picA"+(ii+1)).src  = imag3[i];  //設定黑圈圈
+						  ii++;
+						  if(ii>=imag3.length)
+						  ii = 0; 
+						
+						
+					
+						
+					
+				}
+				
+						
+				var TIMEs = window.setInterval(S,1000);
+						
+				
+				
+				function PIAover1(){
+							document.getElementById("picA").src = "images/1.png"; //滑鼠移過來指向圖1
+							
+					}
+					function PIAover2(){
+							document.getElementById("picA").src = "images/2.jpg"; //滑鼠移過來指向圖
+							
+					}
+					function PIAover3(){
+							document.getElementById("picA").src = "images/3.jpg"; //滑鼠移過來指向圖3
+							
+					}
+					function PIAover4(){
+							document.getElementById("picA").src = "images/4.png"; //滑鼠移過來指向圖4
+							
+					}
+					
+				
+				
+					
+					
+					function PIAout2(){
+							document.getElementById("picA").src = "images/1.png"; //滑鼠移出來指向圖1
+							
+					}
+					
+					
+					function WWW(){
+				 	
+					var linker = Array["http://www.google.com","http://yahoo.com.tw","http://pchome.com.tw","http://www.rakuten.com.tw"]
+					var linker_len = linker.lengh;
+					i = 0;
+					
+					
+				}
+					
+		
+</script>
+ 
+ 
+ 
+
+  
+</head>
+
+
+<body>
+
+
+    <header>
+    
+        <div id="nav">
+            <ul>
+                <li><a href="home.html#home1"><b>介紹</b></a></li>
+                <li><a href="login.html#log"><b>LOGIN</b></a></li>
+                <li><a href=""><b>會員中心</b></a></li>
+                      <li><a href="conect.html"><b>客服部門</b></a></li>
+                 <li><a href="buty.html"><b>回首頁</b></a></li>
+                  <li><a href="buy.html"><b>BUY買這裡瞧!</b></a></li>
+                
+            </ul>
+        </div><hr>
+    </header>
+<!--標頭部分結束-->
+  <script src="new.js"></script>
+  
+<left_border>
+        <div class="left_video">
+         <h4 align="center" style="color:#00C"><p>購買前須知！</p></h4>
+            <iframe width="450" height="300" src="https://www.youtube.com/embed/3WMnPid4ItY?ecver=1" frameborder="50" allowfullscreen align="middle"></iframe>
+        </div>
+        
+</left_border>
+
+<article>
+                            
+        
+
+<b id="butymark1"><h1 class="b" onclick="window.alert('hello')">BUY不停買不停</h1></b>
+<hr>
+<div class = "imgA">
+
+        <div  class="imgB">
+       <img alt="" id="picA" onMouseOver="" onMouseOut="" onclick=";"  src="images/1.png" width="600" height="300"><br><br>
+        
+                    <div id="IMGC" class ="imgC" >
+                    <img alt="" id="picA1" onMouseOver="" onMouseOut=""  src="images/cir.png">
+                    <img alt="" id="picA2" onMouseOver="" onMouseOut=""  src="images/cir.png">
+                    <img alt="" id="picA3" onMouseOver="" onMouseOut=""  src="images/cir.png">
+                    <img alt="" id="picA4" onMouseOver="" onMouseOut=""  src="images/cir.png">
+                    </div>
+        
+        
+        </div>
+        
+        
+</div>
+
+	
+    
+    <p>歡迎來到BUY買首頁，這邊提廣告輪播單含有各大網站連結如：<b>Pchome,Google,樂天,雅虎</b>各大搜尋網站讓各位路過千萬不要錯過輕鬆上手尋找你要的商品</p>
+    
+    <p>在２０１７年成立之BUY買網站當然提供各式各樣商品外，也提供線上客服，貼心小提醒，登入系統驗證，提交顧客回饋，買東西前之須知！</p>
+    <h3>找尋你喜愛的貨物!</h3>
+    <p>當然！這裡不是所有東西都找的到，目的是介紹自身親手實踐網站的架構流程，讓貴公司檢視自身的小作品，以提供公司更好的服務及良好溝通關係，其中也有許多主管們．同事．朋友們幫助之下回歸ＩＴ行業進行深入專研</p>
+    <p>自身經歷LINE貼圖上架流程架構 及 簡單Photoshop/AI 使用 加上<a href = "https://www.youtube.com/watch?v=hmhROFdbafk"><<Ａｆｔｅｒ　Ｅｆｆｅｃｔ>></a>訓練經歷作品</p>
+  <p>在選擇前端與後端相較之下,分析前端需要設計美感及框架抽象架構，後端邏輯訓練應用及協調</p>
+  
+  <p>無論如何謝謝貴公司抽空面談，當然自身也還待努力加強是必須</h3>
+   <h3>部分主打商品：</h3>
+    
+    <figure>
+    <img class="img1" src="images/b1.jpg" title="《SNOOPY行動充❤-圖片二">
+   <figcaption class="a">圖片來自：jkforum</figcaption>
+    </figure><br><br>
+    最後的最後阿漆再精選一些圖片給
+    大家看
+     <figure>
+    <img class="img1" src="images/b2.jpg" title="《日本知名眼罩❤-圖片三">
+   <figcaption class="a">圖片來自：程彤顏Gin 微博</figcaption>
+    </figure><br><br>
+   <div class="bottom">
+        <hr><a href = "#butymark1" class = "down" >&nbsp;&nbsp;&nbsp;&nbsp;置頂</a><br>
+        <a href = "mailto:marklcyndi@gmail.com" class = "down">寄信給我</a>
+        <br>
+         <h4 class= "down_title" style="text-shadow:#3CC" title="i'm here!">CopyRight&copy; From Shih-Mark</h4> <hr>
+         </div>
+         
+</article>
+<!--中間部分結束-->
+
+
+ 
+
+
+</body>
+</html>

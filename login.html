@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="styles/st1.css">
+<link rel="stylesheet" href="styles/st3.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>&gt;BUY買登入系統&lt;</title>
+<link rel="icon" href="images/love.png" />
+<script>
+			window.onload = function (){
+					document.getElementById("acc").onblur = blur ;
+					document.getElementById("pass").onblur = ckname ;
+					
+					document.getElementById("acc").onmouseover = f ; 
+					document.getElementById("acc").onmouseout = O ;
+				
+					document.getElementById("acc").onchange = change;   //修改後離開
+					
+					
+		}
+		function blur (){
+			var thename =  document.getElementById("acc").value;
+			if (thename == "" )
+			document.getElementById("idsa").innerHTML = "<img src='images/r.gif'>必須輸入";
+			else
+			document.getElementById("idsa").innerHTML = "<img src='images/c.png'>可執行";
+			}	
+			
+				function ckname (){
+			var thename =  document.getElementById("pass").value;
+			if (thename == "" )
+			document.getElementById("idsp").innerHTML = "<img src='images/r.gif'> 必須輸入 ";
+			else
+			document.getElementById("idsp").innerHTML = "<img src='images/c.png'> 可執行 ";
+			}	
+		
+			
+			
+		function f (){
+				
+				document.getElementById("A").className = "S";
+	
+				
+			}
+			
+			function O (){
+		
+				document.getElementById("A").className = "N";
+		
+			}
+			
+		function change (){
+		
+				
+			}
+	
+		
+</script>
+
+
+<style>
+
+		
+		.N {color:#000;
+		}
+
+		.S {color:blue;
+		}
+	
+		<!--登入介面-->
+		#inside ul ol{
+			float:none;
+			padding:0px 0px 0px 90px;
+			margin:0px;
+			}
+		#inside ul{
+			padding:60px 0px 0px 90px;
+			margin:0px;
+			}
+			
+				article1 {width:900px;
+		height:600px;
+		margin:auto;
+		padding:250px 0px 0px 0px;
+		display:block;
+		background-image:url("images/bg.gif");
+		}
+		#inside{
+		width:450px;
+		height:300px;
+		padding:none;
+		margin:auto;
+		list-style-type:none;
+		background-image:url("images/login.jpg");
+		
+</style>
+
+
+
+
+
+
+</head>
+
+<body>
+    <header>
+    
+        <div id="nav">
+            <ul>
+                <li><a href="home.html#home1"><b>介紹</b></a></li>
+                <li><a href="login.html#log"><b>LOGIN</b></a></li>
+                <li><a href=""><b>會員中心</b></a></li>
+                      <li><a href="conect.html"><b>客服部門</b></a></li>
+                <li><a href="buty.html"><b>回首頁</b></a></li>
+				  <li><a href="buy.html"><b>BUY買這裡瞧!</b></a></li>
+                
+            </ul>
+        </div><hr>
+    </header>
+
+    <article1>
+    
+        <div id="inside">
+            <ul>
+                <ol id = "A" class = "S" >帳號:<input    type="text" id="acc"   placeholder="BUY買帳號:"  value="" size="20" /></ol><span id = "idsa"></span><br>
+                <ol id = "passs" class = "S">密碼:<input type="password"  id="pass" placeholder="BUY買密碼:"  size="20"></ol><span id ="idsp"></span>
+                <ol><h5>記住密碼<input type="checkbox" name="music"></h5></ol>
+                <ol><h5><a href=""><b>忘記密碼</b></a></h5></ol>
+                <ol><input type="button" value="LOGIN"  ></ol>
+            </ul>
+        </div>
+    
+    </article1>
+
+</body>
+</html>

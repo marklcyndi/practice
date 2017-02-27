@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascript</title>
+<script>
+
+document.write(name);
+var a = 100;
+function f(){
+		var a = "石博丞";
+		document.write("function in a = " + a + "<br>");
+	}
+	document.write("function in a = " + a + "<br>");
+	
+	
+	
+	
+	
+	
+	function checkf(){
+		 //alert("checkage") 檢查是否有連接到BUTTOM
+		 //取得元素//取得ID
+		 var ageOBJ = document.getElementById("age");
+		 //alert(ageOBJ);
+		 
+		 //取得元素值
+		 var ageOBJv = ageOBJ.value;
+		 //alert(ageOBJ.value) // write here
+		 var theage = document.getElementById("age").value;
+		 //alert(theage);
+		 
+		 //判斷元素值是否為數字
+		 if(isNaN(theage))
+		 alert("please input number 0-9!!")
+		 else
+		 alert("age is commit")
+		 
+		 
+		};
+		
+		
+	
+		
+		//姓名 密碼檢查
+			function checkP(){
+				
+				
+		//取得元素值
+		 	var thePWD =document.getElementById("PWD").value;
+			var thePWDLen = thePWD.length;
+			var flag1 = false,flag2 = false;
+		//判斷元素質是否為空白 密碼長度是否大於6
+			if(thePWD == "")
+				alert("不可空白唷");
+			else if (thePWDLen>=6)
+			 { 
+			 //alert(">6");
+			 //如果長度是否大於6 判斷是否包含字母/數字/特殊符號
+			 		for(var i= 0;i < thePWDLen ; i++)
+					{
+						var theChr = thePWD.charAt(i).toUpperCase();
+						if(theChr >= "A" && theChr<= "Z")
+						flag1 = true;
+						else if (theChr >= "0" && theChr <= "9")
+						flag2 = true;
+						
+						if(flag1 && flag2) break;
+						}
+					if(flag1 && flag2) alert("correct") ;
+					 else alert("錯!");
+			 
+				}else
+			alert("password length must been greater than 6");
+	}
+	
+	//email check
+	function checkE(){
+			//取得元素值
+				var GMAIL = document.getElementById("EMAIL").value;
+			//寫法二	
+				var re = /^.+@.+\..{2,3}$/;
+				if (re.test(GMAIL))
+				alert("yes");
+				else
+				alert("no");
+		}
+		//寫法一
+		/*var re = new RegExp("^.+@.+\..{2,3}$","gi")
+			if (re.test(GMAIL))
+				alert("yes");
+				else
+				alert("no");
+		}*/
+	
+	
+
+</script>
+
+
+<script src="prejs.js"></script>
+</head>
+
+<body>
+<h2>年齡檢驗</h2>
+AGE:<input id="age" type="text" value = "write here" size="9" maxlength ="3"    autofocus="autofocus" />
+<br>
+<input type="button" value="年齡驗證" onClick="checkf();"  />
+<hr>
+<h2>姓名與密碼認證</h2>
+姓名:<input type="text"   placeholder="大中天" size = "10" ><input type="button" value="認證姓名"  onClick="" ><br>
+密碼:<input type="text"  placeholder="password" id = "PWD">
+<input type="button" value="認證密碼"  onClick="checkP()"> <bf>
+<h2>日期練習</h2>
+	<script>
+	var d = new Date();
+	
+	var theYear = d.getFullYear()-1911;
+	document.write(theYear+"<hr>");
+	
+</script>
+<h2>陣列練習</h2>
+<script>
+//陣列一
+	var arry = new Array();
+	arry[0] = "ball";
+	arry[1] = "call";
+	arry[2] = "ABC";
+	//document.write(arry);
+	//陣列二
+	var arry = new Array("ball","man","你好");
+	//document.write(arry);	
+	//陣列三
+	var arry2 = ["ball","A",123,"banna","錯誤"];
+		//document.write(arry2);
+	//利用for loop列出所有陣列
+	for(var i = 0; i<arry2.length;i++)
+	{
+		document.write("arry2[" + i + "]=" + arry2[i]+"<hr>");
+		}
+</script>
+
+<script>
+	//HTML屬性事件寫法
+	function on1()
+	{
+		alert("第一個成功");
+		}
+	//JAVASCRIPT 屬性事件處理程序
+	
+	
+	
+	//W3C DOM 處理程序
+	function on3(){
+		alert ("第三個成功");
+		}
+	
+</script>
+
+<h2>email驗證</h2>
+
+EMAIL:<input type="mail" placeholder="ABC@CBA.MMM" size="30" id= "EMAIL"/><br>
+<input type="button" value="驗證信箱" onClick="checkE()" />
+
+<h2>事件處理</h2>
+
+<h1 id = "m1" onClick="on1()">呼叫函數</h1>
+
+<h1 id = "m2" onClick="on2()">呼叫函數</h1>
+<script>
+// document.getElementById("m2").onclick = on2 ; 
+  document.getElementById("m2").onclick = function(){alert("第二個成功")} ; 
+</script>
+
+<h1 id="m3">呼叫函數</h1>
+<script>
+ //document.getElementById("m3").addEventListener("click",on3,false);
+  document.getElementById("m3").addEventListener("click",function(){alert("第三個成功")});
+</script><hr>
+
+</body>
+</html>

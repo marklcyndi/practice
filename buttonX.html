@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>座標練習</title>
+<link  type="text/css" rel="icon" href="HTML/images/love.png">
+<script>
+//更改TITLE
+
+			document.title = "EEIT"
+
+//取消預設
+	document.oncontextmenu = function (ns)
+			{
+				return false ; 
+				//ns.preventDefault();
+				}
+		
+		
+		
+		window.onload = function (){
+					document.getElementById("A").onclick = C;
+			
+			}
+			
+			function C()
+			
+			{
+				 	alert("SC座標為="+event.screenX+"\n"+"C座標為=" + event.clientX + "\n" + event.offsetX);
+				}
+			
+
+</script>
+
+
+</head>
+
+
+
+<body>
+<img src="HTML/images/buty3.jpg" />
+<input type="button" value="座標列印" id= "A" onClick="">
+<input type="button" value="座標列印">
+
+<a href ="http://www.google.com" onClick="function(ns);">google</a>
+</body>
+</html>

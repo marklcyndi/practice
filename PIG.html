@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>圖片抓取</title>
+<style>
+	#drop {
+		
+		width:300px;
+		height:300px;
+		border: 2px solid #00FF33;
+		float:left;}
+		
+		.thunb {
+			
+			height: 300px;
+			margin: 15px;}
+
+</style>
+
+<script>
+
+	
+
+		function fileViewer(){
+			//抓取檔案
+			var theFiles = document.getElementById("file1").files;
+			var files_len = theFiles.length ; 
+		for (var i = 0 ; i < files_len ; i++){
+			
+				//建立FileReader 物件---------
+				var reader = new FileReader();		
+				//使用方法 讀取檔案內容		
+				reader.readAsDataURL(theFiles[i]);
+				
+				reader.onload = function (A){
+				var FileContent = A.target.result;  
+						//讀取成功再把內容放到要放的地方
+				
+				//設定屬性
+				var theIMG = document.createElement("img");
+				//設定IMG屬性
+				theIMG.setAttribute("src",FileContent);
+				//將IMG丟到DIV標籤後
+				document.getElementById("drop").appendChild(theIMG);
+				theIMG.setAttribute("class","thunb");
+							}
+					}
+			
+			}
+ 
+</script>
+
+
+</head>
+
+<body>
+<input type="file" id = "file1" multiple accept="image/*" onChange="fileViewer();">
+<div id = "drop"></div>
+
+</body>
+</html>

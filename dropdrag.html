@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>托放練習</title>
+<style>
+
+	#dragItem {
+		height:30px;
+		width:100px;
+		background-color:#FFC;
+		margin:10px;
+		border:1px solid #0C0;}
+		
+	.dragItemstyle {height:30px;
+		width:100px;
+		background-color:#FFC;
+		margin:10px;
+		border:1px solid #0C0;}
+		
+	#dropZone1,#dropZone {height:250px;
+		width:250px;
+		border:solid #009;
+		float:left;}
+</style>
+
+<script>
+
+		
+		function DGS(e){
+			//儲存要脫放的資料
+			//alert(e.target.id);
+			e.dataTransfer.setData("text/plain",e.target.id);
+			}
+			
+			
+		function DGH(e){
+			e.preventDefault();
+			//取消預設動作
+			}
+			
+			
+		function drop(e){
+			e.preventDefault();
+			//取出托放資料
+			var eleID = e.dataTransfer.getData("text/plain");
+			var eleObj = document.getElementById(eleID);
+			
+			//建立DIV
+			var eleDIV = document.createElement("div");
+			//設定屬性 跟他一樣
+			eleDIV.innerHTML = eleObj.innerHTML ; 
+			eleDIV.setAttribute("class","dragItemstyle");
+			
+			//新增到Z1 Zone 其中
+			//alert(e.currentTarget.id);
+			e.currentTarget.appendChild(eleDIV);
+			
+			}
+
+
+//看要存ID 還是textcontent內容
+</script>
+
+
+</head>
+
+<body>
+
+<div id = "dragItem" draggable="true" ondragstart="DGS(event);">DRAG ME</div>
+<div id = "dropZone"  ondragover= "DGH(event);" ondrop = "drop(event);"></div> 
+<div id = "dropZone1" ondragover="DGH(event);" ondrop = "drop(event);"> </div>
+ 
+</body>
+</html>

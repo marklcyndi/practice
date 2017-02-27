@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>抓取文字內容</title>
+<link rel="icon" href="HTML/images/fb.jpg">
+<script>
+			//抓取文字檔案方法!	
+				
+				
+				
+			//判斷瀏覽器可否支援 以下此功能 
+			if(window.File && window.FileReader && window.FileList && window.Blob)
+			alert('it can support')
+			else
+			alert ('不支援')
+				
+	
+
+		function fileViewer(){
+				
+			
+				//創建圖檔多個檔//取得使用者在檔案選擇標籤中選取檔案
+				var theFiles = document.getElementById("file1").files;
+				//alert(theFiles);  //在外面是屬於FILELIST 檔
+				//將多檔以FOR迴圈調出單一檔案內容
+				var files_len = theFiles.length ; 
+				for (var i = 0 ; i < files_len ; i++){
+					//alert(theFiles[i]);  //物件檔單一檔  單一物件才可調用FILE提供之屬性
+				//alert(theFiles[i].name + "," + theFiles[i].size);
+						
+				//建立FileReader 物件---------
+				var reader = new FileReader();		
+				//使用方法 讀取檔案內容		
+				reader.readAsText(theFiles[i],"UTF-8");
+				
+				reader.onload = function (A){
+					
+						//alert(e.target);
+						//alert(e.target.result);
+						var FileContent = A.target.result;  // e.target.result 檔案內容
+						//讀取成功再把內容放到要放的地方
+					//document.getElementById("show").innerHTML = FileContent ; 
+						//但如果選兩個被後面蓋掉
+						document.getElementById("show").insertAdjacentHTML("beforeEnd",FileContent)
+					
+						
+					}
+					
+					}
+			
+			
+			}
+//檔案過濾 accept 
+</script>
+
+</head>
+
+<body>
+
+
+<input type="file"  id="file1" multiple  accept="image/*" onChange="fileViewer()"><br><br>
+<textarea cols="50" rows="4" id="show"></textarea>
+</body>
+</html>

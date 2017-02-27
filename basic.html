@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+        <link rel="stylesheet" href="styles/st1.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Table教學</title>
+        <style>
+			#tb1 { width:400px;
+				border:1px solid gray;
+				border-collapse:collapse;
+				margin:5px auto;}
+			td {border:0.5px solid green;}
+			th {border:0.5px solid green;}
+			
+			thead {text-transform:lowercase;
+			border-bottom:3px double #AA7700
+			;background-color:yellow;
+			}
+			tbody {
+					text-align:center;
+					/*background-color:orange;*/
+				}
+			tbody tr:nth-child(2n) { background-color:red;}
+			tbody tr:nth-child(2n+1){ background-color:blue;}
+			tbody tr:hover { background-color:#FFF}
+		</style>
+        
+        
+        </head>
+        
+            <body>
+            <header>
+	<div id="nav">
+    	<ul>
+        	<li><a href="home.html#home1">介紹</a></li>
+            <li><a href="">LOGIN</a></li>
+            <li><a href="">會員中心</a></li>
+            <li><a href="">客服部門</a></li>
+            <li><a href="">回首頁</a></li>
+            
+        </ul>
+	</div><hr>
+</header>
+            
+            	<table id ="tb1">
+                <caption><h1>表格樣式</h1></caption>
+                	<thead>
+                	<tr>
+                    	<th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                    </tr>
+                    <tr>
+                    	<th colspan="2">1</th>
+                        
+                        <th colspan="2">3</th>
+                        
+                    </tr>
+                    </thead>
+                    <tbody>
+                	<tr>
+                    	<td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td rowspan="2">4</td>
+                    </tr>
+                    <tr>
+                    	<td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        
+                    </tr>
+                    <tr>
+                    	<td rowspan="4">1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                       <tr>
+                    	
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                       <tr>
+                    	
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                       <tr>
+                    	
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                    	<th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                    </tr>
+                    </tbody>
+                    <tr>
+                    	<th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                    </tr>
+                    <tr>
+                    	<th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                    </tr>
+                    <tr>
+                    	<th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                    </tr>
+                    <tr>
+                    	<th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                    </tr>
+                </table>
+            
+            </body>
+</html>

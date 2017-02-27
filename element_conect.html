@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>元素節點練習</title>
+<link  rel="icon" href="HTML/images/M.png">
+</head>
+<script>
+		function CreateElement(){
+				var theDIV = document.getElementById("iddiv") ;
+				
+				var eleP = document.createElement("p");
+				var txtP = document.createTextNode("Hello World");
+				eleP.appendChild(txtP);
+				//txtP.setAttribute("id","hello");
+				
+				theDIV.appendChild(eleP);
+				
+				var eleIMG = document.createElement("img");
+				eleIMG.setAttribute("src","HTML/images/buty1.jpg")
+				eleIMG.setAttribute("id","idIMG");
+				
+				theDIV.appendChild(eleIMG);
+			
+			}
+			function RemoveElement(){
+				var A = document.getElementById("idIMG")
+				A.parentNode.removeChild(A);
+				//var B = document.getElementById("hello")
+				//B.parentNode.removeChild(B);
+				
+				}
+            
+            
+            </script>
+
+
+
+<body>
+
+	<div id = "iddiv">div </div>
+    <input type="button" value = "CREAT ELEMENT" onClick="CreateElement();"><br>
+     <input type="button" value = "DELETE ELEMENT" onClick="RemoveElement();">
+    
+</body>
+</html>

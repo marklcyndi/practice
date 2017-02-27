@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>FORM</title>
+    </head>
+    
+    <body>
+    		<form action="#" method="post">
+            	姓名:<input type="text" name="name" placeholder="guset" autocomplete="off" autofocus="autofocus" ><br><br>
+                <!--將來對應到SQL資料庫的TABLE-->
+                密碼<input type="password" name="pwd"><br><br>
+                
+                *身分證字號:<input type="text" name="id"  autocomplete="off"  placeholder="A12******" pattern="[a-zA-Z]{1}[1-2]{1}\d{8}"><br><br>
+                <!--身分證驗證需要區分-->
+                
+                性別:男<input type="radio" name="gender" value="male">女
+                <input type="radio" name="gender" value="female"><br><br>
+                E-mail:<input type = "text" name="mai"><br><br>
+                學歷:<select neme="sel">
+                			<option valu="1">高中職</option>
+                            <option valu="1">大學職</option>
+                            <option valu="1">碩士職</option>
+                            <option valu="1">博士職</option>
+                </selection><br>
+                <input type="submit" value="送出"><input type="reset"><br><br>
+                
+                興趣:<input type="checkbox" name="music">音樂
+                	<input type="checkbox" name="ball">籃球
+                    <input type="checkbox" name="fish">釣魚<br><br>
+                  
+                 大頭貼選擇唷!<input type="file" neme="pic" value="jpg" multiple="multiple"><br><br>
+                 
+                 意見回饋:<textarea cols="10" rows="5"></textarea>
+                 BLOG:<input type="url" name="hp" list="hplist">
+                 	<datalist id ="hplist">
+                 		<option value="http://www.facebook.com"></option><br>
+                        <option value="http://www.pchome.tw"></option><br>
+                         <option value="http://www.google.com"></option><br>
+                    </datalist>
+            </form>
+        
+    </body>
+</html>

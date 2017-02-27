@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+
+
+header {background-color:#CCC;}
+	ul,ol {
+		padding:0px;
+		margin:0px;
+		list-style-type:none;
+		}
+	#nav ul li {
+		float:right;
+		padding:15px;
+	
+		}
+	
+	#nav {height:50px;
+	weight:100px;}
+
+/* CSS Document */
+
+a:link {text-decoration:none;color:#000}
+		a:visited{color:#000}
+		a:hover{color:#36F} 	
+		a:active
+		
+		a on:hover{color:#F00} 
+		<!-- 表示超連結樣式-->
+		* margin {90px}
+  		/*img {border:2px  inset #CCC;
+		padding:5px 5px 15px 5px;
+		margin:0px;
+		}	*/
+		.imgimg {border:#FFF;
+		float:right;}
+		
+		iframe {padding:0px;
+		margin:0px 0px 0px 0px;
+			display:block;
+			 border:#FFF}
+
+	
+
+h1 {color:orange;text-transform:uppercase}
+h2 {color:#096;text-transform:uppercase}
+h3 {color:orange;text-transform:uppercase}
+
+.st1 {color:#F39;text-transform:uppercase}
+.st2 {color:#F0F;text-transform:uppercase}
+
+	#request{
+		width:500px;
+		height:250px;
+		margin:280px 0px 0px 700px;
+		border:solid #CCC 3px;
+		float:none;
+		padding:15px;}
+		
+	
+ 	

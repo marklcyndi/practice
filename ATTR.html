@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>下拉是選單使用DOM建立</title>
+<script>
+var d = new Date(2012,3,0);
+var dd = d.getDate();
+
+window.onload = function (){
+	for (i=1; i <= 12 ; i++){  	//
+		//document.getElementById("Sel");
+		//var SE = document.getElementById("Sel");
+		//var OP  = document.createElement("Opention");
+		//var OPvalue = document.createTextNode("value");
+		//OP.appendChild(OPvalue);
+		var opt = document.createElement("option"); //創建元素
+		//opt.setAttribute("value", i );		//設定OPT值與I個不知道的選項列
+		//var optname = document.createTextNode(i);     //創建文字元素
+		//opt.appendChild(optname);  //選項清單與選項值連接
+		//以上是DOM的寫法
+		//以下javascript 寫法
+		opt.value = i ;
+		opt.innerHTML = i ;
+		
+		document.getElementById("Sel").appendChild(opt);
+	}
+		//document.getElementById("Sel").innerHTML = "" ;  此列為去除下拉選單選項
+}
+		
+</script>
+
+</head>
+
+
+<body>
+
+	<select id="Sel"></select>
+</body>
+</html>

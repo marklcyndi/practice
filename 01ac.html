@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>01ac</title>
+</head>
+
+<body>
+
+ 以下可以使用功能<br>
+ 
+ <script>
+ 
+ //window.setTimeout(window.close, 5000);
+ 	var t = window.setTimeout(F,2000);
+	function F (){
+			location.href="http://www.google.com";
+		}
+ 		window.onload = function (){
+					document.getElementById("i").onclick = closeclose ;
+					document.getElementById("ii").onclick = h ;
+					document.getElementById("iii").onclick = stopclose  ;
+			
+			
+			function closeclose ()
+			{
+				window.close();
+				}
+				
+			function h()
+			{
+				location.href = "01a.html";
+				
+				}
+				
+				function stopclose ()
+			{
+				window.clearTimeout(t);
+				
+				}	
+				
+				
+				}
+ </script>
+ 
+ <input type="button" value="關閉自己"   id = "i">
+ <input type="button" value="GO01A網站" id = "ii">
+ <input type="button" value="停止關閉" id = "iii">
+</body>
+</html>
